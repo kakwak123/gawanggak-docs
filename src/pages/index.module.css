@@ -1,0 +1,88 @@
+.page {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 56px 16px 72px;
+}
+
+.hero {
+  max-width: 660px;
+  margin-bottom: 56px;
+}
+
+.title {
+  margin: 0 0 14px;
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400;
+  font-size: clamp(72px, 17vw, 148px);
+  line-height: 0.95;
+  color: #ffb547;
+}
+
+.lead {
+  margin: 0 0 26px;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #d9d6cf;
+  word-break: keep-all;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.primary {
+  color: #17120a;
+  background: #ffb547;
+}
+
+.primary:hover {
+  color: #17120a;
+  background: #ffc36b;
+  text-decoration: none;
+}
+
+.secondary {
+  color: #fff;
+  border: 1px solid #34343c;
+}
+
+.secondary:hover {
+  color: #fff;
+  background: #1e1e24;
+  text-decoration: none;
+}
+
+.primary:focus-visible,
+.secondary:focus-visible {
+  outline: 2px solid #7cc4ff;
+  outline-offset: 2px;
+}
+
+.heading {
+  margin: 0 0 18px;
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;
+}
+
+.foot {
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: #b8b4ac;
+}

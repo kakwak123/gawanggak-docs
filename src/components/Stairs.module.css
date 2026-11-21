@@ -1,0 +1,139 @@
+.stairs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.item {
+  margin: 0;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  column-gap: 10px;
+  row-gap: 2px;
+  align-items: baseline;
+  padding: 14px 16px;
+  color: #d9d6cf;
+  background: #17171c;
+  border-left: 4px solid #34343c;
+  text-decoration: none;
+  transition: background-color 120ms ease;
+}
+
+.step:hover {
+  color: #fff;
+  background: #1e1e24;
+  text-decoration: none;
+}
+
+.step:focus-visible {
+  outline: 2px solid #7cc4ff;
+  outline-offset: 2px;
+}
+
+.num {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  color: #8e8a82;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+
+.state {
+  font-size: 13px;
+  color: #b8b4ac;
+}
+
+.note {
+  grid-column: 2 / -1;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b8b4ac;
+}
+
+.done {
+  border-left-color: #ffb547;
+}
+
+.done .num {
+  color: #ffb547;
+}
+
+.now {
+  background: #ffb547;
+  border-left-color: #fff;
+}
+
+.now:hover {
+  background: #ffc36b;
+}
+
+.now .num,
+.now .name,
+.now .state,
+.now .note {
+  color: #17120a;
+}
+
+.now .state {
+  font-weight: 700;
+}
+
+/* From tablet up it is a real staircase: each stage stands one riser taller than the last. */
+@media (min-width: 900px) {
+  .stairs {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    align-items: end;
+    gap: 3px;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: calc(190px + var(--i) * 34px);
+    padding: 14px 12px;
+    border-left: 0;
+    border-top: 4px solid #34343c;
+  }
+
+  .done {
+    border-top-color: #ffb547;
+  }
+
+  .now {
+    border-top-color: #fff;
+  }
+
+  .name {
+    font-size: 15px;
+    line-height: 1.35;
+    word-break: keep-all;
+  }
+
+  .note {
+    font-size: 13px;
+    line-height: 1.55;
+    word-break: keep-all;
+  }
+
+  .state {
+    order: 3;
+    margin-top: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step {
+    transition: none;
+  }
+}

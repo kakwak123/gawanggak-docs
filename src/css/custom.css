@@ -1,0 +1,94 @@
+/* The app's stage colours and type (same tokens as the mobile app). */
+:root,
+[data-theme='dark'] {
+  --ifm-color-primary: #ffb547;
+  --ifm-color-primary-dark: #ffa923;
+  --ifm-color-primary-darker: #ffa311;
+  --ifm-color-primary-darkest: #d98200;
+  --ifm-color-primary-light: #ffc16b;
+  --ifm-color-primary-lighter: #ffc77d;
+  --ifm-color-primary-lightest: #ffd9a3;
+  --ifm-background-color: #0b0b0e;
+  --ifm-background-surface-color: #121216;
+  --ifm-navbar-background-color: #0b0b0e;
+  --ifm-footer-background-color: #0b0b0e;
+  --ifm-font-color-base: #d9d6cf;
+  --ifm-heading-color: #fff;
+  --ifm-toc-border-color: #26262d;
+  --ifm-hr-border-color: #26262d;
+  --ifm-table-border-color: #34343c;
+  --ifm-table-stripe-background: #121216;
+  --ifm-font-family-base: 'Noto Sans KR', system-ui, -apple-system, 'Malgun Gothic', sans-serif;
+  --ifm-heading-font-family: 'Noto Sans KR', system-ui, sans-serif;
+  --ifm-line-height-base: 1.8;
+  --ifm-global-radius: 2px;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 181, 71, 0.14);
+}
+
+body {
+  background: #0b0b0e;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid #26262d;
+}
+
+.navbar__title {
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+}
+
+.navbar__logo {
+  height: 28px;
+}
+
+.footer {
+  border-top: 1px solid #26262d;
+}
+
+.footer__copyright {
+  color: #b8b4ac;
+  font-size: 13px;
+}
+
+.markdown h1:first-child,
+.markdown > header > h1 {
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400;
+  --ifm-h1-font-size: 2.5rem;
+}
+
+.markdown h2 {
+  font-weight: 700;
+}
+
+.markdown a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.theme-doc-sidebar-menu .menu__link {
+  min-height: 40px;
+  align-items: center;
+}
+
+/* Inside a doc column the staircase has no room to rise, so it stays a list. */
+.markdown ol[aria-label] {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0;
+}
+
+.markdown ol[aria-label] a {
+  display: grid;
+  min-height: 0;
+  text-decoration: none;
+  border-top: 0;
+  border-left-width: 4px;
+  border-left-style: solid;
+  padding: 14px 16px;
+}
