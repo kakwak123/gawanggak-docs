@@ -16,6 +16,7 @@ const sidebars: SidebarsConfig = {
       items: ['intro', 'features', 'tiers', 'how-it-works', 'limits'],
     },
     'privacy',
+    'privacy-policy',
     'changelog',
   ],
 }
