@@ -1,6 +1,6 @@
 /* The app's stage colours and type (same tokens as the mobile app). */
 :root,
-[data-theme='dark'] {
+html[data-theme='dark'] {
   --ifm-color-primary: #ffb547;
   --ifm-color-primary-dark: #ffa923;
   --ifm-color-primary-darker: #ffa311;
@@ -46,7 +46,10 @@ body {
   height: 28px;
 }
 
-.footer {
+.footer,
+.footer--dark {
+  --ifm-footer-background-color: #0b0b0e;
+  background-color: #0b0b0e;
   border-top: 1px solid #26262d;
 }
 
